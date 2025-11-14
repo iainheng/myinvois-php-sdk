@@ -437,6 +437,6 @@ class MyInvoisClient
         $body = $e->getResponse()->getReasonPhrase();
         $errorCode = $e->getResponse()->getStatusCode();
 
-        throw new Exception($body, $errorCode);
+        throw new Exception($body, $errorCode, $e);
     }
 }
